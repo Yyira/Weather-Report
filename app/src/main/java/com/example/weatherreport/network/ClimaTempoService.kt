@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface ClimaTempoService {
 
 
-    @GET("/geo/1.0/direct")
+    @GET("/data/2.5/weather")
     suspend fun getClimaTempoCity(
         @Query("appid") appid: String,
         @Query("q") city:String
