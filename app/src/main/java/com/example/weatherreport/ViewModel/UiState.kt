@@ -1,22 +1,21 @@
 package com.example.weatherreport.ViewModel
 
 data class UiState(
-    val cityName:String = "NONE",
-    val pressure:Int = 1000,
-    val humidity:Int = 50,
-    val windSpeed: Double = 10.0,
-    val feelsLike: Int = 25,
-    val temp: Int = 0,
+    val cityName:String = "",
+
+
+    val day1: dayOfWeek? = null,
+    val day2: dayOfWeek? = null,
+    val day3: dayOfWeek? = null,
+    val day4: dayOfWeek? = null,
+    val day5: dayOfWeek? = null,
+
 
 
     )
 
-enum class DataNames {
-    DOM,
-    SEG,
-    TER,
-    QUA,
-    QUI,
-    SEX,
-    SAB
-}
+data class dayOfWeek(
+    val icon:String,
+    val temp: Int,
+    val day:String
+)
